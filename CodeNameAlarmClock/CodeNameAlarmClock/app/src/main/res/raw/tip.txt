@@ -1,0 +1,7 @@
+This window activity initiates a QRCODE simulator scan. On pressing the button below
+a simulator scanner will initiate turning your phones camera
+into a barcode or a QRcode reader. In relation to the simulation in this alarm clock
+app, you are required to scan a Barcode (mainly found on your shampoo or any other product
+in your house hold) to quit this annoying ringing. You have no choice but to wake-up and
+scan a barcode of your own preference for this alarm to be turned off. Have a GoodDay!!!
+ Now To all those Heavy sleepers have fun getting past this,that is if you DARE!!!
