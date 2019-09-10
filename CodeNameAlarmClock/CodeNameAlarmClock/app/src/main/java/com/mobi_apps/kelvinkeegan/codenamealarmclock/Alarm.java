@@ -71,9 +71,9 @@ public class Alarm implements Serializable {
 	private Boolean alarmActive = true;
 	private Calendar alarmTime = Calendar.getInstance();
 	private Day[] days = {Day.MONDAY,Day.TUESDAY,Day.WEDNESDAY,Day.THURSDAY,Day.FRIDAY,Day.SATURDAY,Day.SUNDAY};	
-	private String alarmTonePath = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM).toString();
+	public static String alarmTonePath = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM).toString();
 	private Boolean vibrate = true;
-	private String alarmName = "Alarm Clock";
+	public static String alarmName = "Alarm Clock";
 	private Difficulty difficulty = Difficulty.EASY;
 	
 	public Alarm() {
@@ -213,7 +213,9 @@ public class Alarm implements Serializable {
 	 * @param alarmTonePath the alarmTonePath to set
 	 */
 	public void setAlarmTonePath(String alarmTonePath) {
-		this.alarmTonePath = alarmTonePath;
+
+		Alarm.alarmTonePath = alarmTonePath;
+
 	}
 	
 	/**
@@ -243,7 +245,8 @@ public class Alarm implements Serializable {
 	 *            the alarmName to set
 	 */
 	public void setAlarmName(String alarmName) {
-		this.alarmName = alarmName;
+		Alarm.alarmName = alarmName;
+
 	}
 
 	public Difficulty getDifficulty() {
@@ -281,7 +284,7 @@ public class Alarm implements Serializable {
 //					daysStringBuilder.append(d.toString().substring(0, 4));
 //					break;
 					default:
-						daysStringBuilder.append(d.toString().substring(0, 3));		
+						daysStringBuilder.append(d.toString(), 0, 3);
 						break;
 				}				
 				daysStringBuilder.append(',');

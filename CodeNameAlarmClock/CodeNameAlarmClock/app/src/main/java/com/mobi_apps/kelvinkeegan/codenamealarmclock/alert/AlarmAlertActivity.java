@@ -25,8 +25,8 @@ import java.io.InputStream;
 
 public class AlarmAlertActivity extends AppCompatActivity {
 
-	private Alarm alarm;
-	private MediaPlayer mediaPlayer;
+	public Alarm alarm = new Alarm();
+	private MediaPlayer mediaPlayer = new MediaPlayer();
 
 	private StringBuilder answerBuilder = new StringBuilder();
 
@@ -46,8 +46,8 @@ public class AlarmAlertActivity extends AppCompatActivity {
 		setContentView(R.layout.alarm_alert);
 
 		Bundle bundle = this.getIntent().getExtras();
-		alarm = (Alarm) bundle.getSerializable("alarm");
 
+	//	alarm = (Alarm) bundle.getSerializable("alarm");
 		this.setTitle(alarm.getAlarmName());
 
 		TelephonyManager telephonyManager = (TelephonyManager) this

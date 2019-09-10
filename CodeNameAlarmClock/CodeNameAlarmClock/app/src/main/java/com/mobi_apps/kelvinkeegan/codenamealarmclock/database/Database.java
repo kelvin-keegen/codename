@@ -63,6 +63,7 @@ public class Database extends SQLiteOpenHelper {
 	}
 
 	public static long create(Alarm alarm) {
+
 		ContentValues cv = new ContentValues();
 		cv.put(COLUMN_ALARM_ACTIVE, alarm.getAlarmActive());
 		cv.put(COLUMN_ALARM_TIME, alarm.getAlarmTimeString());
